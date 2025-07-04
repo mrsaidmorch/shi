@@ -180,14 +180,36 @@ const HomePage = () => {
               </div>
             </div>
             
-            <div className="relative animate-fade-in-right order-first lg:order-last">
+            {/* Desktop Only Server/Network Image */}
+            <div className="relative animate-fade-in-right hidden lg:block">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-600/20 rounded-2xl md:rounded-3xl blur-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-600/20 rounded-3xl blur-2xl"></div>
                 <img
-                  src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="SHI Solutions IT"
-                  className="relative rounded-2xl md:rounded-3xl shadow-2xl w-full h-48 sm:h-64 md:h-auto object-cover"
+                  src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Infrastructure Serveur et Réseau SHI"
+                  className="relative rounded-3xl shadow-2xl w-full object-cover"
                 />
+                
+                {/* Overlay with tech icons */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-3xl"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex space-x-3">
+                      <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
+                        <Server className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
+                        <Network className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
+                        <Shield className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+                    <div className="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-xl">
+                      Infrastructure Premium
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
