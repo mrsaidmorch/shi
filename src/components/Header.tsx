@@ -47,22 +47,22 @@ const Header = () => {
         : 'bg-transparent'
     }`}>
       <div className="container-custom">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
-              <div className="relative bg-gradient-to-r from-primary-600 to-primary-700 p-2 rounded-xl">
-                <Network className="h-8 w-8 text-white" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 rounded-lg md:rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative bg-gradient-to-r from-primary-600 to-primary-700 p-1.5 md:p-2 rounded-lg md:rounded-xl">
+                <Network className="h-6 w-6 md:h-8 md:w-8 text-white" />
               </div>
             </div>
-            <span className={`text-2xl font-bold transition-colors ${
+            <span className={`text-xl md:text-2xl font-bold transition-colors ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>SHI</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <Link
               to="/"
               className={`text-sm font-medium transition-all duration-300 hover:scale-105 ${
@@ -136,7 +136,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center">
             <Link
               to="/contact"
-              className={`btn-primary ${!isScrolled ? 'bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20' : ''}`}
+              className={`btn-primary text-sm px-6 py-3 ${!isScrolled ? 'bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20' : ''}`}
             >
               Devis Gratuit
             </Link>
@@ -149,7 +149,7 @@ const Header = () => {
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5 md:h-6 md:w-6" /> : <Menu className="h-5 w-5 md:h-6 md:w-6" />}
           </button>
         </div>
 
@@ -198,7 +198,7 @@ const Header = () => {
               
               <Link
                 to="/contact"
-                className="btn-primary w-full justify-center mt-6"
+                className="btn-primary w-full justify-center mt-6 text-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Devis Gratuit
