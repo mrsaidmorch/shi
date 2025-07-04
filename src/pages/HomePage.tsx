@@ -119,7 +119,7 @@ const HomePage = () => {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section - Mobile Optimized */}
+      {/* Hero Section - Mobile Optimized with Larger Desktop Image */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900 text-white overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
@@ -129,7 +129,7 @@ const HomePage = () => {
         </div>
         
         <div className="relative container-custom py-8 md:py-0">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="space-y-6 md:space-y-8 animate-fade-in-up text-center lg:text-left">
               <div className="space-y-4 md:space-y-6">
                 <div className="inline-flex items-center px-3 py-2 md:px-4 md:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
@@ -180,33 +180,69 @@ const HomePage = () => {
               </div>
             </div>
             
-            {/* Desktop Only Server/Network Image */}
+            {/* Desktop Only Server/Network Image - Much Larger */}
             <div className="relative animate-fade-in-right hidden lg:block">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-600/20 rounded-3xl blur-2xl"></div>
-                <img
-                  src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Infrastructure Serveur et Réseau SHI"
-                  className="relative rounded-3xl shadow-2xl w-full object-cover"
-                />
-                
-                {/* Overlay with tech icons */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-3xl"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex space-x-3">
-                      <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
-                        <Server className="h-6 w-6 text-white" />
-                      </div>
-                      <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
-                        <Network className="h-6 w-6 text-white" />
-                      </div>
-                      <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
-                        <Shield className="h-6 w-6 text-white" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/30 to-accent-600/30 rounded-3xl blur-3xl"></div>
+                <div className="relative">
+                  <img
+                    src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Infrastructure Serveur et Réseau SHI"
+                    className="relative rounded-3xl shadow-2xl w-full h-[600px] xl:h-[700px] object-cover"
+                  />
+                  
+                  {/* Enhanced Overlay with tech icons */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-3xl"></div>
+                  
+                  {/* Floating Tech Icons */}
+                  <div className="absolute top-8 left-8">
+                    <div className="bg-white/20 backdrop-blur-md p-4 rounded-2xl animate-float">
+                      <Server className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  
+                  <div className="absolute top-1/3 right-8">
+                    <div className="bg-white/20 backdrop-blur-md p-4 rounded-2xl animate-float" style={{ animationDelay: '1s' }}>
+                      <Network className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  
+                  <div className="absolute top-2/3 left-12">
+                    <div className="bg-white/20 backdrop-blur-md p-4 rounded-2xl animate-float" style={{ animationDelay: '2s' }}>
+                      <Shield className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  
+                  {/* Bottom Info Panel */}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                      <div className="flex items-center justify-between">
+                        <div className="flex space-x-4">
+                          <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
+                            <Server className="h-6 w-6 text-white" />
+                          </div>
+                          <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
+                            <Network className="h-6 w-6 text-white" />
+                          </div>
+                          <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl">
+                            <Shield className="h-6 w-6 text-white" />
+                          </div>
+                        </div>
+                        <div className="text-white">
+                          <div className="text-lg font-bold">Infrastructure Premium</div>
+                          <div className="text-sm text-white/80">Solutions Serveur & Réseau</div>
+                        </div>
                       </div>
                     </div>
-                    <div className="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-xl">
-                      Infrastructure Premium
+                  </div>
+                  
+                  {/* Performance Indicators */}
+                  <div className="absolute top-8 right-8">
+                    <div className="bg-emerald-500/20 backdrop-blur-md rounded-xl p-3 border border-emerald-400/30">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span className="text-white text-sm font-medium">99.9% Uptime</span>
+                      </div>
                     </div>
                   </div>
                 </div>
