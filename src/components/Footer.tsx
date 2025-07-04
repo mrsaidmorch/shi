@@ -48,7 +48,7 @@ const Footer = () => {
     },
     { 
       icon: <Linkedin className="h-5 w-5" />, 
-      href: '#', 
+      href: 'https://www.linkedin.com/company/smarthighit', 
       name: 'LinkedIn',
       color: 'hover:text-blue-500'
     },
